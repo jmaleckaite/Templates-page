@@ -1,0 +1,40 @@
+.TemplateList-main {
+	width: 320px;
+	height: 420;
+	padding: 14px 25px;
+	margin: auto;
+	border-radius: 4px;
+	font-family: 'Roboto';
+}
+	
+.TemplateList-img {
+	height: auto;
+	max-height: 250px;
+	width: auto;
+	max-width: 300;
+}
+
+.btn {
+	cursor: pointer;	
+}
+
+.div.wrap {
+	padding: 14px 25px;
+	margin: auto;
+}
+.TemplateList-img:hover {
+	background-color: gray;
+}
+
+a:link, a:visited {
+  color: gray;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Roboto';
+}
+
+a:hover, a:active {
+  background-color: #d3d3d3;
+}
