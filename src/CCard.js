@@ -10,7 +10,8 @@ import logo from './img/1.jpg';
 import second from './img/2.jpg';
 import third from './img/3.jpg';
 import ReactDOM from 'react-dom';
-import { Link, BrowserRouter, Switch, Route, withRouter, Redirect } from 'react-router-dom';
+import { Link, Switch, Route, withRouter, Redirect } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom'
 import Preview from './Preview';
 import Desktop from './Desktop';
 import Mobile from './Mobile';
@@ -22,7 +23,7 @@ class CCard extends React.Component {
 	render() {
 		return (
 		<div className="button">
-		<BrowserRouter basename={process.env.PUBLIC_URL}>
+		<Router>
 		<Button as={ Link } to='/TemplateList'>Templates</Button>
 		<Switch>
 		<Route path="/TemplateList">
@@ -35,7 +36,7 @@ class CCard extends React.Component {
 			<UseTemplate />
 		</Route>
 		</Switch>
-		</BrowserRouter>
+		</Router>
 		</div>
 		);
 	}
@@ -46,7 +47,7 @@ function useTemplate() {
 	return (
 	  <div class="ui container center aligned">
 		  
-		  <BrowserRouter basename={process.env.PUBLIC_URL}>
+		  <Router>
 		  <Button as={ Link } to='/Desktop' icon='desktop'/>
 		  <Button as={ Link } to='/Mobile' icon='mobile alternate'/>
 		  <Button as={ Link } to='/Save' icon='save'/>
@@ -65,7 +66,7 @@ function useTemplate() {
       <Image
 	src= {logo}
 	/>
-	</BrowserRouter>
+	</Router>
 	 </div>
 	);
   };
@@ -83,7 +84,7 @@ function TemplateList(props) {
 	</Card.Content>
 	<Card.Content extra>
 	<div className='ui button'>
-		<BrowserRouter basename={process.env.PUBLIC_URL}>
+		<Router>
 	<Button icon labelPosition='left' basic color='blue' as={Link} to='/Preview' target='_blank'>
 	<Icon name='eye' />
 	Preview
@@ -99,7 +100,7 @@ function TemplateList(props) {
 			<UseTemplate />
 		</Route>
 	</Switch>
-	</BrowserRouter>
+	</Router>
 	</div>
 	</Card.Content>
 	</Card>
@@ -112,7 +113,7 @@ function TemplateList(props) {
 	</Card.Content>
 	<Card.Content extra>
 	<div className='ui button'>
-			<BrowserRouter basename={process.env.PUBLIC_URL}>
+			<Router>
 	<Button icon labelPosition='left' basic color='blue' as={Link} to='/Preview' target='_blank'>
 	<Icon name='eye'/>
 	Preview
@@ -128,7 +129,7 @@ function TemplateList(props) {
 			<UseTemplate />
 		</Route>
 	</Switch>
-	</BrowserRouter></div>
+	</Router></div>
 	
 	</Card.Content>
 	</Card>
@@ -141,7 +142,7 @@ function TemplateList(props) {
 	</Card.Content>
 	<Card.Content extra>
 	<div className='ui button'>
-	<BrowserRouter basename={process.env.PUBLIC_URL}>
+	<Router>
 	<Button icon labelPosition='left' basic color='blue' as={Link} to='/Preview' target='_blank'>
 	<Icon name='eye' />
 	Preview
@@ -157,7 +158,7 @@ function TemplateList(props) {
 			<UseTemplate />
 		</Route>
 	</Switch>
-	</BrowserRouter>
+	</Router>
 	</div>
 	</Card.Content>
 	</Card>
@@ -169,7 +170,7 @@ function TemplateList(props) {
 function UseTemplate(props) {
 	return (
 	  <div class="ui container center aligned">
-		  <BrowserRouter basename={process.env.PUBLIC_URL}>
+		  <Router>
 		  <Button as={ Link } to='/Desktop' icon='desktop'/>
 		  <Button as={ Link } to='/Mobile' icon='mobile alternate'/>
 		  <Button as={ Link } to='/#' icon='save'/>
@@ -184,7 +185,7 @@ function UseTemplate(props) {
 			  </Route>
 			  <Redirect to="/desktop" />
 		  </Switch>
-		 </BrowserRouter> 
+		 </Router> 
      
 	
 	 </div>

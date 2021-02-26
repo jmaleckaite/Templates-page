@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, Header, Icon, Message, Checkbox, Form, Modal, 
 Segment, Menu, Grid, Image } from 'semantic-ui-react';
-import { BrowserRouter, Switch, Route, NavLink, Link, Redirect } from 'react-router-dom'; 
+import { Switch, Route, NavLink, Link, Redirect } from 'react-router-dom'; 
+import { HashRouter as Router } from 'react-router-dom'
 import logo from './img/1.jpg';
 import 'semantic-ui-css/semantic.min.css';
 import Desktop from './Desktop';
@@ -30,7 +31,7 @@ const { activeItem } = this.state
 		<div className="preview">
         <div className="ui container center alligned">
 		<Form>
-		<BrowserRouter basename={process.env.PUBLIC_URL}>
+		<Router>
 		<Button as={Link} to="/desktop"  icon='desktop' size='large' />
 		<Button as={Link} to="/mobile" icon='mobile alternate' size='large' />
         <Switch>
@@ -42,7 +43,7 @@ const { activeItem } = this.state
 		</Route>
 		<Redirect to="desktop" />
 		</Switch>
-		</BrowserRouter>
+		</Router>
 		</Form>
 		</div>
 		</div>
