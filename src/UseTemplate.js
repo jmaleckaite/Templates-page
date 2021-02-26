@@ -15,7 +15,7 @@ return (
     <div className="preview">
     <div className="ui container center alligned">
     <Form>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Button as={Link} to="/#" icon='save' size='large' />
     <Switch>
     <Route path="/desktop">

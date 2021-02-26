@@ -22,7 +22,7 @@ class CCard extends React.Component {
 	render() {
 		return (
 		<div className="button">
-		<BrowserRouter>
+		<BrowserRouter basename={process.env.PUBLIC_URL}>
 		<Button as={ Link } to='/TemplateList'>Templates</Button>
 		<Switch>
 		<Route path="/TemplateList">
@@ -46,7 +46,7 @@ function useTemplate() {
 	return (
 	  <div class="ui container center aligned">
 		  
-		  <BrowserRouter>
+		  <BrowserRouter basename={process.env.PUBLIC_URL}>
 		  <Button as={ Link } to='/Desktop' icon='desktop'/>
 		  <Button as={ Link } to='/Mobile' icon='mobile alternate'/>
 		  <Button as={ Link } to='/Save' icon='save'/>
@@ -83,7 +83,7 @@ function TemplateList(props) {
 	</Card.Content>
 	<Card.Content extra>
 	<div className='ui button'>
-		<BrowserRouter>
+		<BrowserRouter basename={process.env.PUBLIC_URL}>
 	<Button icon labelPosition='left' basic color='blue' as={Link} to='/Preview' target='_blank'>
 	<Icon name='eye' />
 	Preview
@@ -112,7 +112,7 @@ function TemplateList(props) {
 	</Card.Content>
 	<Card.Content extra>
 	<div className='ui button'>
-			<BrowserRouter>
+			<BrowserRouter basename={process.env.PUBLIC_URL}>
 	<Button icon labelPosition='left' basic color='blue' as={Link} to='/Preview' target='_blank'>
 	<Icon name='eye'/>
 	Preview
@@ -141,7 +141,7 @@ function TemplateList(props) {
 	</Card.Content>
 	<Card.Content extra>
 	<div className='ui button'>
-	<BrowserRouter>
+	<BrowserRouter basename={process.env.PUBLIC_URL}>
 	<Button icon labelPosition='left' basic color='blue' as={Link} to='/Preview' target='_blank'>
 	<Icon name='eye' />
 	Preview
@@ -169,7 +169,7 @@ function TemplateList(props) {
 function UseTemplate(props) {
 	return (
 	  <div class="ui container center aligned">
-		  <BrowserRouter>
+		  <BrowserRouter basename={process.env.PUBLIC_URL}>
 		  <Button as={ Link } to='/Desktop' icon='desktop'/>
 		  <Button as={ Link } to='/Mobile' icon='mobile alternate'/>
 		  <Button as={ Link } to='/#' icon='save'/>

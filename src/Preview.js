@@ -30,7 +30,7 @@ const { activeItem } = this.state
 		<div className="preview">
         <div className="ui container center alligned">
 		<Form>
-		<BrowserRouter>
+		<BrowserRouter basename={process.env.PUBLIC_URL}>
 		<Button as={Link} to="/desktop"  icon='desktop' size='large' />
 		<Button as={Link} to="/mobile" icon='mobile alternate' size='large' />
         <Switch>
